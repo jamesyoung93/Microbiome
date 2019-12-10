@@ -1,0 +1,36 @@
+name: Lab 01 Amplicon Sequence Denoising via DADA2
+output_dir: '.'
+output:
+  html_document:
+    theme: cosmo
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    lib_dir: site_libs
+    self_contained: no
+navbar:
+  title: Lab 01
+  type: inverse
+  left:
+  - text: home
+    icon: fa-home
+  - text: Tutorial
+    icon: fa-exclamation
+    href: Lab-01-DADA2.html
+  - text: Source
+    icon: fa-gear
+    href: Lab-01-DADA2.Rmd
+  - text: Further Reading
+    icon: fa-newspaper-o
+    menu:
+    - text: DADA2 Home Page
+      href: http://benjjneb.github.io/dada2/
+    - text: DADA2 Big Data
+      href: https://benjjneb.github.io/dada2/bigdata.html
+    - text: DADA2 Peer-Reviewed Article
+      href: http://dx.doi.org/10.1038/nmeth.3869
+    - text: DADA2 Slides
+      href: http://benjjneb.github.io/dada2/SMBS_DADA2.pdf
+

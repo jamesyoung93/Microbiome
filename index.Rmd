@@ -1,0 +1,34 @@
+---
+title: "Lab 01: Amplicon Sequence Denoising via DADA2"
+author: SISMID 2018 Module 08
+date: "`r date()`"
+---
+
+
+&nbsp;
+
+---
+
+# Motivation
+
+For any amplicon sequencing experiment, it is necessary to:
+
+(1) **Filter**. Remove sequences that have very low quality, too many ambiguous letters, unexpected length, or any other properties that suggest they are invalid for analysis.
+(2) **Trim**. Prune/remove the beginning and end of each sequence, such that each sequence is the same length and regions with very low quality are omitted.
+(3) **Dereplicate**. Collect identical sequences, count the number of copies.
+(4) **Denoise**. Distinguish perfectly correct sequences from sequences that contain 1 or more errors. Assign error-containing sequencse to their most-likely parent.
+(4) **Remove Chimeras**. Chimeras are sequences that don't exist in nature, but are nonetheless apparent in PCR amplified DNA due to recombination between two or more true biological sequences. It would be accurate to call this a subset of the denoising process, but the errors being detected here are so different that it is usually useful to treat them as distinct. For the DADA2 workflow, chimera detection/removal occurs after denoising.
+(5) **Classify**. For most amplicon sequencing projects there exists an available reference database of known sequences from microbes that have been named and/or characterized. This provides a kind of useful supervisory information that is often a key aspect of data interpretation later.
+(6) **Organize**. In practice you will have repeated observations of the same amplicon in different biospecimens, conditions, along gradients of time or space, etc. It is important to organize the counts of each sequence in each sample in a way that is useful to analyze and communicate. This is where the phyloseq package comes in at the end of this lab exercise.
+
+
+&nbsp;
+
+---
+
+# Goals of this Lab
+
+The goal of this lab is to practice executing all of these steps on an example dataset from a "mock" community experiment in which the microbes in each sample are known in advance. This data is small enough in size to be transfered to your laptop and computed in the alotted time. All of the steps are the same for a much larger dataset, which might require more computing power or time. The important thing is that you experience how to do it, and develop an understanding of each step.
+
+
+
